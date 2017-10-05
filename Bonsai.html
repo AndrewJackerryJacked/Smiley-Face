@@ -1,0 +1,53 @@
+<html>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bonsai/0.4/bonsai.min.js"></script>
+<div id="movie"></div>
+<script>
+  bonsai.run(document.getElementById('movie'), {
+    code: function() {
+new Circle(200,200,100)
+.attr({fillColor:'yellow'})
+.addTo(stage);
+   
+var anim = new KeyframeAnimation('4s', {
+    '0s': {x:74, y:586},
+    '1s': {x:795, y:696},
+    '2s': {x:654, y:459},
+    '3s': {x:765, y:13},
+    '4s': {x:170, y:170}
+});
+new Ellipse (170, 170, 30/2, 50/2)
+  .attr('fillColor', 'black')
+  .addTo(stage)
+  .animate(anim);
+  
+var anim = new KeyframeAnimation('4s', {
+    '0s': {x:845, y:345},
+    '1s': {x:195, y:96},
+    '2s': {x:654, y:420},
+    '3s': {x:596, y:349},
+    '4s': {x:240, y:170}
+});
+new Ellipse (240, 170, 30/2, 50/2)
+  .attr('fillColor', 'black')
+  .addTo(stage)
+  .animate(anim);
+  
+var anim = new KeyframeAnimation('4s', {
+    '0s': {x:74, y:586},
+    '1s': {x:587, y:435},
+    '2s': {x:654, y:459},
+    '3s': {x:785, y:250},
+    '4s': {x:200, y:220}
+});
+new Arc(200, 220, 50, 0, Math.PI, 0)
+  .attr('fillColor', 'black')
+    .attr('strokeWidth', 10)
+  .addTo(stage)
+  .animate(anim);
+},
+    width: 1000,   //change the width and height of the canvas
+    height: 1000
+  });
+</script></body>
+</html>
